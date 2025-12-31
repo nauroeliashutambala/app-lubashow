@@ -1,0 +1,1159 @@
+<?php
+    session_start();
+?>
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+<meta charset="utf-8">
+
+
+    <!--====== Title ======-->
+    <title>LubaShow - Conecte talentos, produtos e serviços em Angola</title>
+
+    <!--====== Meta Description ======-->
+    <meta name="description" content="A plataforma angolana que conecta talentos, produtos e serviços ao público certo. Descubra e seja descoberto com o LubaShow.">
+    <meta name="author" content="LubaShow, Nauro Elias Hutambala, Nelson Pinto Carlos">
+    <meta name="keywords" content="LubaShow, Angola, talentos, produtos, serviços, marketplace, app, plataforma">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://lubashow.com/">
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
+
+    <!--====== Open Graph / Social Sharing ======-->
+    <meta property="og:title" content="LubaShow - Conecte talentos, produtos e serviços em Angola">
+    <meta property="og:description" content="Conecte talentos, produtos e serviços ao público certo com o LubaShow. Descubra e seja descoberto!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lubashow.com/">
+    <meta property="og:image" content="https://lubashow.com/assets/img/logotipo.png">
+
+    <!--====== Twitter Card ======-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LubaShow - Conecte talentos, produtos e serviços em Angola">
+    <meta name="twitter:description" content="Conecte talentos, produtos e serviços ao público certo com o LubaShow. Descubra e seja descoberto!">
+    <meta name="twitter:image" content="https://lubashow.com/assets/img/logotipo.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+
+<!-- Bootstrap CSS via jsDelivr -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+	<!-- Libraries Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" rel="stylesheet">
+
+<!-- Bootstrap CSS via jsDelivr -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Template Stylesheet -->
+    <link href="myassets/css/style.css" rel="stylesheet">
+    
+    <style>
+        img{
+            border-radius: 10px;
+        }
+/* ===============================
+   PALETA LUBASHOW (Bootstrap Override)
+   =============================== */
+:root {
+    /* Elemento central: LARANJA */
+    --primary: #FF7A00;
+    --primary-dark: #CC5F00;
+
+    /* Bootstrap Colors Override */
+    --bs-primary: #FF7A00;
+    --bs-primary-rgb: 255, 122, 0;
+
+    /* Outras cores ajustadas para combinar */
+    --bs-secondary: #BDBDBD;
+    --bs-secondary-rgb: 189, 189, 189;
+
+    --bs-success: #4CAF50;
+    --bs-info: #79D4E3;
+    --bs-warning: #FFB84D;
+    --bs-danger: #FF6B3D;
+    --bs-light: #F5F5F5;
+    --bs-dark: #333333;
+
+    /* Remover completamente o azul original */
+    --bs-blue: #FF7A00;
+    --bs-link-color: #FF7A00;
+    --bs-link-hover-color: #CC5F00;
+}
+
+/* ===============================
+   BOTÕES
+   =============================== */
+.btn-primary {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+/* ===============================
+   TEXTOS
+   =============================== */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.text-bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+/* ===============================
+   BACKGROUNDS (bg-primary)
+   =============================== */
+.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+/* ===============================
+   BORDAS (border-primary)
+   =============================== */
+.border-primary {
+    border-color: var(--bs-primary) !important;
+}
+
+/* ===============================
+   ALERTAS
+   =============================== */
+.alert-primary {
+    background-color: rgba(var(--bs-primary-rgb), 0.15) !important;
+    border-color: rgba(var(--bs-primary-rgb), 0.4) !important;
+    color: var(--bs-primary) !important;
+}
+
+/* ===============================
+   BADGES
+   =============================== */
+.badge.bg-primary {
+    background-color: var(--bs-primary) !important;
+}
+
+/* ===============================
+   PAGINAÇÃO
+   =============================== */
+.page-item.active .page-link {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+.page-link:hover {
+    color: var(--primary-dark) !important;
+}
+
+/* ===============================
+   NAV LINKS (Bootstrap Nav)
+   =============================== */
+.nav-link.active,
+.nav-pills .nav-link.active,
+.navbar-nav .nav-link.show {
+    background-color: var(--bs-primary) !important;
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-dark) !important;
+}
+
+/* ===============================
+   FORM CONTROLS (focus highlight)
+   =============================== */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--bs-primary) !important;
+    box-shadow: 0 0 0 0.22rem rgba(var(--bs-primary-rgb), 0.35) !important;
+}
+
+    </style>
+
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" style="display: none; z-index: 0;"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Aguarde...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <a href="#" class="navbar-brand" style="display: flex; align-items: center;">
+                <img src="https://lubashow.com/assets/img/logo.png" alt="Logotipo" style="height: 50px; width: auto;">
+                <h3 class="text-dark">LubaShow</h3>
+            </a>
+
+            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+
+                    <a href="/" class="nav-item nav-link active">Início</a>
+                    <a href="https://lubashow.com/login/" class="nav-item nav-link">Login</a>
+                    <a href="https://lubashow.com/cadastro/" class="nav-item nav-link">Cadastro</a>
+                    <a href="https://blog.lubashow.com" class="nav-item nav-link">Blog</a>
+                    <a href="#" class="nav-item nav-link">Planos</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Mais</a>
+                        <div class="dropdown-menu bg-light mt-2">
+
+                            <a href="#" class="dropdown-item">Sobre a LubaShow</a>
+                            <a href="https://blog.lubashow.com/2025/12/como-faturar-alto-usando-o-chatgpt-e.html" class="dropdown-item">Formas de vender </a>
+                            <a href="https://blog.lubashow.com/2025/12/como-funciona-um-perfil-no-lubashow-e.html" class="dropdown-item">Melhorar perfil</a>
+                            <a href="https://blog.lubashow.com/2025/12/quem-pode-usar-o-lubashow.html" class="dropdown-item">Quem pode usar o LubaShow</a>
+                            <a href="https://blog.lubashow.com/2025/12/quem-pode-usar-o-lubashow.html" class="dropdown-item">Central de Ajuda</a>
+                            <a href="#" class="dropdown-item">Contactos</a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+    <!-- Hero Start -->
+<div class="container-fluid pt-5 bg-primary hero-header mb-5">
+    <div class="container pt-5">
+        <div class="row g-5 pt-5">
+
+            <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+         
+
+                <h1 class="display-4 text-white mb-4 animated slideInRight">
+                    Expanda o seu alcance e venda mais com a LubaShow!
+                </h1>
+
+                <p class="text-white mb-4 animated slideInRight">
+                    A LubaShow é a plataforma que conecta fornecedores, criadores e clientes em um único
+                    ecossistema digital. Publique produtos, promova serviços, participe de eventos e aumente
+                    sua visibilidade com ferramentas modernas, rápidas e seguras. Aqui, o seu negócio ganha vida!
+                </p>
+
+                <a href="https://lubashow.com/pages/home/" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill mt-10 animated slideInRight">
+                    Começar agora 
+                </a>
+            </div>
+
+            <div class="col-lg-6 align-self-end text-center text-lg-end">
+                <img class="img-fluid" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhRlZfvZXNQoLFg-iCZM2qsHttGE3Vw4AitglPYSzOTLSCDgfr1l8RA2wNQm3e4RpeG1PtP-57jm-uA7LaAmCyIloEFh-iyYa-M1bsUZX2MZjHGZYPfyt-m9twFAzN4gJ0KgSlV2nGZpbDKI1F0sSpz8qThjdIUrvCW9M97XurEAOb7kRClG1BEPtbV0tD8/s898/IMG_20251211_173217.jpg" alt="Imagem principal do LubaShow">
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<!-- Full Screen Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+            <div class="modal-header border-0">
+                <button type="button" class="btn btn-square bg-white btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex align-items-center justify-content-center">
+                <div class="input-group" style="max-width: 600px;">
+                    <input type="text" class="form-control bg-transparent border-light p-3"
+                        placeholder="Pesquise produtos, serviços, fornecedores...">
+                    <button class="btn btn-light px-4"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Full Screen Search End -->
+
+    
+    <!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="about-img">
+                    <img class="img-fluid" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0HTJt0ds2dnDRhM1oL3yX7TrKyN0kYtfTYsCVonB6SMcB4EXe5SwZD6axIW0kEqZQgBD9KQDyadpKfgu0K_8hz2vqDa3bVFaNC-6G6FUTLW4qs_hFIn0G8H9ewoNYQ_knQ2A228Qoba1cKm9mXlVSWhf48y8ixe-7zHlqn3a0hbaL364ovY8FQjlFB2cf/s1080/image_1765223471495.jpeg" alt="Vendedores da LubaShow felizes com a facilicade nas vendas e atendimento">
+                </div>
+            </div>
+
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Sobre a LubaShow</div>
+
+                <h1 class="mb-4">A plataforma que conecta fornecedores, criadores e clientes</h1>
+
+                <p class="mb-4">
+                    A LubaShow é um ecossistema digital inovador que permite publicar produtos, promover serviços,
+                    participar de eventos e alcançar novos públicos com facilidade.  
+                    <br><br>
+                    Com ferramentas modernas, segurança avançada e uma comunidade em crescimento, ajudamos vendedores,
+                    empresas e criadores a expandirem a sua presença online, aumentarem as vendas e fortalecerem as suas marcas.
+                </p>
+
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Crescimento garantido</h6>
+                        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Equipe dedicada</h6>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Suporte profissional</h6>
+                        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Planos acessíveis</h6>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center mt-4">
+                    <a class="btn btn-primary rounded-pill px-4 me-3" href="https://lubashow.com/home">Acesse a loja online</a>
+
+                    <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-primary btn-square me-3" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-primary btn-square" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+    
+<!-- Service Start -->
+<div class="container-fluid bg-light mt-5 py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Serviços LubaShow</div>
+
+                <h1 class="mb-4">Soluções digitais que impulsionam o seu crescimento dentro da LubaShow</h1>
+
+                <p class="mb-4">
+                    A LubaShow oferece ferramentas e soluções modernas para criadores, fornecedores e empreendedores 
+                    que pretendem expandir sua presença digital. Desde downloads rápidos, gestão de produtos 
+                    e serviços, até ferramentas para aumentar o alcance e engajamento — aqui você encontra tudo 
+                    o que precisa para evoluir dentro da plataforma.
+                </p>
+
+                <a class="btn btn-primary rounded-pill px-4" href="sobre.php">Saiba mais</a>
+            </div>
+
+            <div class="col-lg-7">
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="row g-4">
+
+               <!-- Serviço 1 -->
+                <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon btn-square">
+                            <i class="fa fa-phone fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Contato Direto com o LubaShow</h5>
+                        <p>
+                            Entre em contacto conosco de forma rápida e prática!  
+                            Seja por chamada, e-mail ou WhatsApp, nossa equipe está pronta para atender suas dúvidas, oferecer suporte e ajudar no que for necessário.
+                        </p>
+                        <a class="btn px-3 mt-auto mx-auto" href="contato.php">Fale Conosco</a>
+                    </div>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon btn-square">
+                            <i class="fa fa-cubes fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Ferramentas para Fornecedores</h5>
+                        <p>
+                            Recursos completos para fornecedores: publique, gerencie e promova produtos com mais eficiência.  
+                            Controle inventário, personalize anúncios e maximize vendas de forma profissional.
+                        </p>
+                        <a class="btn px-3 mt-auto mx-auto" href="fornecedores.php">Consulte mais</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6 pt-md-4">
+            <div class="row g-4">
+
+                <!-- Serviço 3 -->
+                <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon btn-square">
+                            <i class="fa fa-lightbulb fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Academia LubaShow</h5>
+                        <p>
+                            Cursos e conteúdos educativos voltados a negócios, marketing digital, criação de conteúdo e tecnologia.  
+                            Aprimore habilidades e destaque-se no mercado digital com aprendizado contínuo.
+                        </p>
+                        <a class="btn px-3 mt-auto mx-auto" href="academia.php">Explorar</a>
+                    </div>
+                </div>
+
+                <!-- Serviço 4 -->
+                <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="service-item d-flex flex-column justify-content-center text-center rounded">
+                        <div class="service-icon btn-square">
+                            <i class="fa fa-chart-line fa-2x"></i>
+                        </div>
+                        <h5 class="mb-3">Painel Inteligente</h5>
+                        <p>
+                            Monitoramento completo do desempenho dos seus conteúdos e produtos.  
+                            Visualizações, engajamento, conversões e comportamento do público apresentados de forma clara para decisões estratégicas.
+                        </p>
+                        <a class="btn px-3 mt-auto mx-auto" href="dashboard.php">Ver métricas</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+    <!-- Feature Start -->
+    <div class="container-fluid bg-primary feature pt-5">
+        <div class="container pt-5">
+            <div class="row g-5">
+                <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Porquê escolher a LubaShow?</div>
+                    <h1 class="text-white mb-4">Inovação, confiança e resultados reais para o seu negócio</h1>
+                    <p class="text-light mb-4">
+                        A LubaShow oferece soluções digitais avançadas para empresas e criadores que desejam evoluir.
+                        Com experiência sólida no desenvolvimento de apps, plataformas, automações e ferramentas inteligentes,
+                        entregamos projetos rápidos, eficientes e totalmente personalizados às necessidades dos nossos clientes.
+                    </p>
+
+                    <div class="d-flex align-items-center text-white mb-3">
+                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <span>Entrega rápida e processos altamente otimizados.</span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white mb-3">
+                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <span>Projetos profissionais com foco total na qualidade.</span>
+                    </div>
+
+                    <div class="d-flex align-items-center text-white mb-3">
+                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <span>Transparência e confiabilidade em todas as etapas.</span>
+                    </div>
+
+                    <div class="row g-4 pt-3">
+    <div class="col-sm-6">
+        <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
+            <i class="fa fa-users fa-3x text-white"></i>
+            <div class="ms-3">
+                <h2 class="text-white mb-0" data-toggle="counter-up">320</h2>
+                <p class="text-white mb-0">Usuários cadastrados</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-6">
+        <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
+            <i class="fa fa-box fa-3x text-white"></i> +<!-- Ícone melhor para produtos -->
+            <div class="ms-3">
+                <h2 class="text-white mb-0" data-toggle="counter-up">148</h2>
+                <p class="text-white mb-0">Produtos e servíços Disponíveis</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+
+                <div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
+                    <img class="img-fluid" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcn7v9ZkmxksD58neuaVgy8GgIZMsp_g_hjfKnM27WsKSABFaKzMSonH2hCUrLi__i630IodWem1Cw2wDUh2s25bHsTZzUujrPW-Dcc_22jlaILPy3e6KiMKccfVsmXi8uUfiNccst7iWbbBUdxaOZoN7aTT7XtZkvdWWuyyZTA2naE8UEe1T8zg7BpP-I/s1024/copilot_image_1765225525911.jpeg" alt="Usuários da LubaShow felizes.">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+<!-- LubaShow Cases Start -->
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+        <!-- Cabeçalho da Seção -->
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Casos de Sucesso LubaShow</div>
+            <h1 class="mb-4">Projetos reais que impulsionaram criadores e negócios digitais</h1>
+        </div>
+
+        <!-- Grid de Cases -->
+        <div class="row">
+            <!-- Case 1 -->
+            <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                <article class="case-item position-relative overflow-hidden rounded mb-4">
+                    <img class="img-fluid"	 style="height: 500px; object-fit: cover"
+                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy16GLStT0YtnN9Pe-2D_yB6CUA82INbAI9ckbMaKMqB76-DUmY2rHaSHNPg99NnZU4l8KpBoYZStv6-d3FDjUJXQCKYg3J2niUcvrcMDt_9tWVVNj4H2OW9DtzloOUegfYlgdyWtnpcwAqyaKXDciEIHsDYndo7eQXXrD3B7gFC33y0Rkp5vpeXbx7lIU/w426-h640/copilot_image_1765123826009.jpeg" alt="Vndedor da LubaShow">
+                    <a class="case-overlay text-decoration-none" href="https://blog.lubashow.com/2025/12/como-lubashow-esta-ajudando-empresas.html">
+                        <small>Ensinamentos</small>
+                        <h5 class="lh-base text-white mb-3">
+                            Como a LubaShow está ajudando empresas a vender e obter o maximo de sucesso por parte da mesma?
+                        </h5>
+                        <span class="btn btn-square btn-primary">
+                            <i class="fa fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Case 2 -->
+            <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                <article class="case-item position-relative overflow-hidden rounded mb-4">
+                    <img class="img-fluid"  style="height: 500px; object-fit: cover"
+                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsaOTvcJCXFWpi3vcSdYoWOdEbkezkquPucUuTR1sIHTN-2_NyzKG-7R9rMv7wOZwSs9Rf3daBODMz1Im0oTS0JGzEzhrMRpRNcrdyydCaIAkBZoiJLBlupdQf_ovZ3zbpIvchDmjOSY7MG139MeCCkoP8EKHDb-jRTomf7ZuF-7ER6JqlnbSTG2tBKlXU/w640-h640/copilot_image_1765106437749.jpeg" alt="Vendedores e clientes da LubaShow">
+                    <a class="case-overlay text-decoration-none" href="https://blog.lubashow.com/2025/12/quem-pode-publicar-no-lubashow.html">
+                        <small>Pergunta importante</small>
+                        <h5 class="lh-base text-white mb-3">
+                            Quem pode estar habilitado a vendas na LubaShow?
+                        </h5>
+                        <span class="btn btn-square btn-primary">
+                            <i class="fa fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Case 3 -->
+            <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                <article class="case-item position-relative overflow-hidden rounded mb-4">
+                    <img class="img-fluid"	 style="height: 500px; object-fit: cover" 
+                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5d83T7zKSZRr_TEFodKPntdTjzb9ZnfSVOhNJ5L4xu8X767Jdn95l9TUOZYNhLiRJB9Cj0Z9lYp-pzzbOvFsPhR_SWQKixhR81J_4l2pM24nhPORMDcKLN-jKhgOzEJekiwO7KHjQg4PmOKxG8xTIFzs-b3dxUIZF23QJ_sYr-dlHmoakd95GiUR0XN7j/s16000/image_1765096539536.jpeg" alt="Optimização de perfil">
+                    <a class="case-overlay text-decoration-none" href="https://blog.lubashow.com/2025/12/como-funciona-um-perfil-no-lubashow-e.html">
+                        <small>Optimização</small>
+                        <h5 class="lh-base text-white mb-3">
+                            Importancia do uso de username otimizado na LubaShow para obter mais vendas e acessos.
+                        </h5>
+                        <span class="btn btn-square btn-primary">
+                            <i class="fa fa-arrow-right"></i>
+                        </span>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- LubaShow Cases End -->
+<!-- FAQs LubaShow Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <!-- Cabeçalho da Seção -->
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">FAQs LubaShow</div>
+            <h1 class="mb-4">Perguntas Frequentes sobre a Plataforma LubaShow</h1>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="accordion" id="accordionFAQ">
+
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.1s">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                O que é o LubaShow?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                O LubaShow é uma plataforma digital que permite publicar produtos, serviços e conteúdos em um único link.  
+                                Ideal para quem não tem um website próprio, permitindo que você organize, compartilhe e venda tudo de forma prática.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.2s">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Como posso publicar meus produtos ou serviços?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Após criar sua conta, você pode adicionar produtos ou serviços com descrição, imagens e preço.  
+                                A plataforma gera automaticamente um link único que você pode compartilhar com clientes ou em redes sociais.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.3s">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                É possível vender sem precisar de um website?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Sim! O LubaShow substitui a necessidade de um website próprio, permitindo que você organize e venda produtos ou serviços diretamente através do link da sua página LubaShow.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.4s">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Como posso receber pagamentos pelos meus produtos ou serviços?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                O LubaShow integra métodos de pagamento seguros, permitindo que seus clientes efetuem pagamentos diretamente na plataforma, seja por cartão, transferência ou outros métodos disponíveis.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.5s">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Posso gerenciar vários produtos e serviços ao mesmo tempo?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Sim! O LubaShow permite organizar todos os seus produtos, serviços e conteúdos em uma única página, facilitando a gestão e compartilhamento com clientes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.6s">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                Existe versão gratuita e planos pagos?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Sim! A versão gratuita permite começar a publicar produtos e serviços. Os planos pagos oferecem recursos avançados como links personalizados, maior capacidade de armazenamento e opções de monetização completa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.7s">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Como posso divulgar meu link LubaShow?
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Você pode compartilhar seu link em redes sociais, mensagens, e-mails, anúncios ou qualquer outro canal digital.  
+                                Isso ajuda a alcançar clientes sem precisar criar um site próprio.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.8s">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                Meus conteúdos e produtos estão seguros na plataforma?
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                            data-bs-parent="#accordionFAQ">
+                            <div class="accordion-body">
+                                Sim! O LubaShow garante a segurança e privacidade dos conteúdos publicados, protegendo informações e produtos dos usuários contra acessos não autorizados.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Novas FAQs LubaShow -->
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="0.9s">
+    <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+            Posso editar meus produtos ou serviços após publicar?
+        </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            É possível atualizar títulos, descrições, imagens, preços e detalhes dos seus produtos e serviços a qualquer momento, mantendo tudo organizado para seus clientes.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.0s">
+    <h2 class="accordion-header" id="headingTen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+            É possível organizar produtos por categoria ou tags?
+        </button>
+    </h2>
+    <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            O LubaShow permite criar categorias ou usar tags para facilitar que seus clientes encontrem rapidamente produtos ou serviços específicos.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.1s">
+    <h2 class="accordion-header" id="headingEleven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+            Existe limite de produtos ou serviços que posso publicar?
+        </button>
+    </h2>
+    <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            A versão gratuita possui um limite inicial, mas os planos pagos permitem publicar um número ilimitado de produtos e serviços, ideal para quem deseja expandir seu negócio.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.2s">
+    <h2 class="accordion-header" id="headingTwelve">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+            O LubaShow gera relatórios de vendas ou estatísticas?
+        </button>
+    </h2>
+    <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            Você pode acessar métricas detalhadas sobre visualizações, cliques, vendas e engajamento dos seus produtos, ajudando a tomar decisões mais estratégicas.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.3s">
+    <h2 class="accordion-header" id="headingThirteen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+            Posso criar links personalizados para meus produtos?
+        </button>
+    </h2>
+    <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            Nos planos pagos, você pode criar links curtos e personalizados para cada produto, serviço ou página da sua LubaShow, facilitando a divulgação.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.4s">
+    <h2 class="accordion-header" id="headingFourteen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+            Como funciona o atendimento ao cliente na plataforma?
+        </button>
+    </h2>
+    <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            O LubaShow oferece suporte via chat, e-mail e central de ajuda para auxiliar usuários em dúvidas técnicas, gestão de produtos e monetização.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.5s">
+    <h2 class="accordion-header" id="headingFifteen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+            Posso integrar meus links LubaShow com redes sociais e marketplaces?
+        </button>
+    </h2>
+    <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            Você pode compartilhar seu link em qualquer rede social ou marketplace, aumentando a visibilidade e alcance dos seus produtos sem precisar de um site próprio.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.6s">
+    <h2 class="accordion-header" id="headingSixteen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+            O LubaShow funciona em dispositivos móveis?
+        </button>
+    </h2>
+    <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            A plataforma é totalmente responsiva, permitindo gerenciar produtos, serviços e conteúdos diretamente do smartphone ou tablet.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.7s">
+    <h2 class="accordion-header" id="headingSeventeen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+            Existem tutoriais para iniciantes?
+        </button>
+    </h2>
+    <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            O LubaShow disponibiliza vídeos e guias passo a passo para criar seu perfil, adicionar produtos, configurar pagamentos e divulgar seu link de forma eficiente.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.8s">
+    <h2 class="accordion-header" id="headingEighteen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+            Posso vender produtos físicos e digitais na mesma conta?
+        </button>
+    </h2>
+    <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            O LubaShow suporta ambos os tipos de produtos, permitindo oferecer serviços, arquivos digitais, cursos, produtos físicos ou qualquer outro tipo de conteúdo.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="1.9s">
+    <h2 class="accordion-header" id="headingNineteen">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+            Como meus clientes recebem os produtos digitais?
+        </button>
+    </h2>
+    <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            Produtos digitais são entregues diretamente via download ou link seguro gerado pela plataforma após a compra.
+        </div>
+    </div>
+</div>
+
+<div class="accordion-item wow fadeIn mb-3" data-wow-delay="2.0s">
+    <h2 class="accordion-header" id="headingTwenty">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+            Como posso cancelar ou alterar meu plano?
+        </button>
+    </h2>
+    <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty"
+        data-bs-parent="#accordionFAQ">
+        <div class="accordion-body">
+            Você pode gerenciar seu plano diretamente pelo painel da plataforma. Planos pagos podem ser atualizados, revertidos ou cancelados a qualquer momento.
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FAQs LubaShow End -->
+
+
+<!-- Team Start -->
+<div class="container-fluid bg-light py-5" id="galeria">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Equipe LubaShow</div>
+                <h1 class="mb-4">A Visão por Trás da Plataforma LubaShow</h1>
+                <p class="mb-4">
+                    Conheça a equipa responsável por transformar a LubaShow na plataforma digital que conecta vendedores, criadores e consumidores de forma simples, segura e inovadora. 
+                    Cada membro contribui com experiência, criatividade e dedicação para garantir o melhor serviço possível aos nossos utilizadores.
+                </p>
+                <a class="btn btn-primary rounded-pill px-4" href="#">Saiba mais sobre a equipa</a>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="row g-4">
+
+                            <!-- Card 1 -->
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
+                                <div class="team-item bg-white text-center rounded p-4 pt-0">
+                                    <img class="img-fluid rounded-circle p-4" style="height: 200px;width: 200px; object-fit: cover;"
+                                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgT89LYPgLcxkWa_B96E7lfIq-oe1zKnlsc-4XRLrG4YmXmYLj_b-fI1wMxwGmQD3ufZvxVhi6AHUxH9VR2IOQAXG9g43JtxPaLankvdBGtW3kugX6TGGR9Xr59GNQmOmYFXnlT9zuQIMTjDrhLMrWGb_OBaZSskTL2v1c36uvcHeqwk95bvfxdhrFOc1Xx/s953/FB_IMG_17607172295856763.jpg" alt="Nauro Elias Hutambala - Fundador LubaShow">
+                                    <h5 class="mb-0">Nauro Elias Hutambala</h5>
+                                    <small>Co-Fundador & CEO da LubaShow</small>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary m-1" href="https://m.facebook.com/p/Nauro-Elias-100071157964166/?locale=nl_NL" target="blank"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary m-1" href="https://wa.me/244924595755"><i class="fab fa-whatsapp"></i></a>
+                                        <a class="btn btn-square btn-primary m-1" href="https://www.instagram.com/nauroelias/"><i class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-square btn-primary m-1" href="https://ao.linkedin.com/in/nauro-elias-hutambala-929619275"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="team-item bg-white text-center rounded p-4 pt-0">
+                                    <img class="img-fluid rounded-circle p-4"  style="height: 200px;width: 200px; object-fit: cover;"
+                                         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgwDBrjThYFS_FRMHTkBUEKWvPZpSXMI5panb7MPle2ZQE3S2amI6j5_cJMTClwLJxyAAyRttPC_-ADhMv_azXRK4-e_xcyIO1g5CbOfRN7W-q1hp4xUVmKUq0cxi0edgLotbS5h_sTk46wZCbDlfvRdtw0weKSgbmGKVC6QSebJy3BJl6B-XNpsPNhSUZX/s1054/Gemini_Generated_Image_j8pfsoj8pfsoj8pf.jpg" alt="Nelson Kandongo Carlos - Co-Fundador & CTO da LubaShow">
+                                    <h5 class="mb-0">Nelson Kandongo Carlos</h5>
+                                    <small>Co-Fundador & CTO da LubaShow</small>
+                                    <div class="d-flex justify-content-center mt-3">
+                                        <a class="btn btn-square btn-primary m-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-square btn-primary m-1" href="#"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-square btn-primary m-1" href="#"><i class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-square btn-primary m-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Testemunhos:</div>
+                <h1 class="mb-4">O que dizem os nossos clientes!</h1>
+                <p class="mb-4">Veja como a LubaShow tem ajudado empreendedores e criadores a expandir os seus negócios e alcançar resultados reais:</p>
+                <a class="btn btn-primary rounded-pill px-4" href="#">Mais Testemunhos</a>
+            </div>
+            <div class="col-lg-7 wow fadeIn" data-wow-delay="0.5s">
+                <div class="owl-carousel testimonial-carousel border-start border-primary">
+
+                    <!-- Testemunho 1 -->
+                    <div class="testimonial-item ps-5">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p class="fs-4">A LubaShow revolucionou a forma como gerimos nossos produtos online. A plataforma é fácil de usar, confiável e muito eficiente. Recomendo totalmente!</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Mariana Costa</h5>
+                                <span>Empreendedora Digital</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testemunho 2 -->
+                    <div class="testimonial-item ps-5">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p class="fs-4">Com a LubaShow, conseguimos alcançar mais clientes em menos tempo. A plataforma é intuitiva e o suporte é excelente. Vale cada minuto investido!</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Pedro Fernandes</h5>
+                                <span>Vendedor Online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testemunho 3 -->
+                    <div class="testimonial-item ps-5">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p class="fs-4">Excelente plataforma! A LubaShow não só facilita a gestão dos produtos, como também ajuda a expandir a visibilidade da nossa marca. Muito satisfeito com os resultados!</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Ana Silva</h5>
+                                <span>Gestora de Loja Online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Testimonial End -->
+
+<!-- Newsletter Start -->
+<div class="container-fluid bg-primary newsletter py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-md-5 ps-lg-0 pt-5 pt-md-0 text-start wow fadeIn" data-wow-delay="0.3s">
+                <img class="img-fluid" src="img/newsletter.png" alt="Newsletter LubaShow">
+            </div>
+            <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
+                <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Newsletter</div>
+                <h1 class="text-white mb-4">Inscreva-se e fique por dentro!</h1>
+                <div class="position-relative w-100 mt-3 mb-2">
+                    <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Digite seu e-mail" style="height: 48px;">
+                    <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2">
+                        <i class="fa fa-paper-plane text-primary fs-4"></i>
+                    </button>
+                </div>
+                <small class="text-white-50">Receba novidades, promoções e dicas exclusivas da LubaShow diretamente no seu e-mail.</small>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newsletter End -->
+
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 footer pt-5">
+    <div class="container py-5">
+        <div class="row g-5">
+
+            <!-- Sobre Nós -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                <a href="index.php" class="d-inline-block">
+                    <h2 class="text-white">LubaShow</h2>
+                </a>
+                <p class="mb-0">Descubra o universo do LubaShow – onde entretenimento e criatividade se encontram. Fornecemos soluções digitais e de streaming para levar conteúdo de qualidade aos nossos usuários. Junte-se a nós e faça parte desta experiência!</p>
+            </div>
+
+            <!-- Contactos -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                <h5 class="text-white mb-4">Entre em Contato</h5>
+                <p><i class="fa fa-map-marker-alt me-3"></i>Lubango, Huíla, Angola</p>
+                <p><i class="fa fa-phone-alt me-3"></i>+244 924595755</p>
+                <p><i class="fa fa-envelope me-3"></i>contato@lubashow.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-outline-light btn-social me-1" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Links Populares -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                <h5 class="text-white mb-4">Links Populares</h5>
+                <a class="btn btn-link" href="">Sobre Nós</a>
+                <a class="btn btn-link" href="">Contacte-Nos</a>
+                <a class="btn btn-link" href="">Política de Privacidade</a>
+                <a class="btn btn-link" href="">Termos & Condições</a>
+                <a class="btn btn-link" href="">Carreiras</a>
+            </div>
+
+            <!-- Nossos Serviços -->
+            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <h5 class="text-white mb-4">Serviços do LubaShow</h5>
+                <a class="btn btn-link" href="">Streaming de Vídeos</a>
+                <a class="btn btn-link" href="">Monetização de Conteúdo</a>
+                <a class="btn btn-link" href="">Criação de Perfis de Artistas</a>
+                <a class="btn btn-link" href="">Eventos e Lives</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="container wow fadeIn" data-wow-delay="0.1s">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; 2024 <a class="border-bottom" href="#">LubaShow</a>. Todos os direitos reservados.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-menu">
+                        <a href="">Início</a>
+                        <a href="">Cookies</a>
+                        <a href="">Ajuda</a>
+                        <a href="">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="myassets/js/main.js"></script>
+</body>
+
+</html>
