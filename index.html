@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -522,7 +524,7 @@
 
 
 
-    
+
     <!-- Lojas Online Start -->
     <div class="container-fluid bg-light py-5" id="lojas-online">
         <div class="container">
@@ -555,7 +557,7 @@
         </div>
     </div>
     <!-- Lojas Online End -->
-<!-- Products Start -->
+    <!-- Products Start -->
     <div class="container-fluid py-5" id="produtos">
         <div class="container">
 
@@ -1038,51 +1040,60 @@
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
         <div class="container py-5">
             <div class="row g-4">
+
+                <!-- Sobre o LubaShow -->
                 <div class="col-lg-5">
                     <h5 class="text-white mb-3">LubaShow</h5>
-                    <p class="mb-3">Perfil comercial e portf?lio pessoal com foco em convers?o.</p>
+                    <p class="mb-3">
+                        Perfil comercial e portfólio pessoal completo, com foco em conversão, vendas e contato direto.
+                    </p>
                     <div class="d-flex flex-wrap gap-2">
-                        <a class="btn btn-outline-light btn-sm" href="#links">Contactos</a>
-                        <a class="btn btn-outline-light btn-sm" href="#gestao">?rea de Gest?o</a>
+                        <a class="btn btn-outline-light btn-sm" href="#links">Contatos</a>
+                        <a class="btn btn-outline-light btn-sm" href="#gestao">Área de Gestão</a>
                     </div>
                 </div>
 
+                <!-- Seções do site -->
                 <div class="col-lg-4">
-                    <h6 class="text-white mb-3">Se??es</h6>
+                    <h6 class="text-white mb-3">Seções</h6>
                     <div class="d-flex flex-wrap gap-2">
-                        <a class="btn btn-link" href="#perfil">Perfil</a>
-                        <a class="btn btn-link" href="#portfolio">Portf?lio</a>
-                        <a class="btn btn-link" href="#produtos">Produtos</a>
-                        <a class="btn btn-link" href="#servicos">Servi?os</a>
-                        <a class="btn btn-link" href="#ebooks">Ebooks</a>
-                        <a class="btn btn-link" href="#links">Links</a>
+                        <a class="btn btn-link text-white-50 p-0" href="#perfil">Perfil</a>
+                        <a class="btn btn-link text-white-50 p-0" href="#portfolio">Portfólio</a>
+                        <a class="btn btn-link text-white-50 p-0" href="#produtos">Produtos</a>
+                        <a class="btn btn-link text-white-50 p-0" href="#servicos">Serviços</a>
+                        <a class="btn btn-link text-white-50 p-0" href="#ebooks">Ebooks</a>
+                        <a class="btn btn-link text-white-50 p-0" href="#links">Links</a>
                     </div>
                 </div>
 
+                <!-- Acesso rápido -->
                 <div class="col-lg-3">
-                    <h6 class="text-white mb-3">Acesso r?pido</h6>
+                    <h6 class="text-white mb-3">Acesso rápido</h6>
                     <a class="btn btn-primary w-100 mb-2" href="https://lubashow.com/login/">Entrar</a>
                     <a class="btn btn-outline-primary w-100" href="https://lubashow.com/cadastro/">Criar perfil</a>
                 </div>
+
             </div>
         </div>
+
+        <!-- Copyright -->
         <div class="container">
-            <div class="copyright">
+            <div class="border-top border-secondary mt-4 pt-3">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; 2026 <a class="border-bottom" href="#">LubaShow</a>. Todos os direitos reservados.
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        &copy; 2026 <a class="text-white border-bottom" href="#">LubaShow</a>. Todos os direitos
+                        reservados.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="#gestao">?rea de Gest?o</a>
-                            <a href="#links">Contactos</a>
-                        </div>
+                        <a class="text-white-50 me-3" href="#gestao">Área de Gestão</a>
+                        <a class="text-white-50" href="#links">Contatos</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
+
 
 
     <!-- Back to Top -->
