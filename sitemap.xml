@@ -1,45 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org">
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://lubashow.com</loc>
+    <loc>https://lubashow.com/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://lubashow.com/planos/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://lubashow.comp/rodutos/</loc>
+    <loc>https://lubashow.com/produtos/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://lubashow.com/sobre-nos/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+
   <url>
     <loc>https://lubashow.com/suporte/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
+
   <url>
     <loc>https://lubashow.com/politica-de-privacidade/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://lubashow.com/termos-e-condicoes/</loc>
     <lastmod>2026-07-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+
 </urlset>
